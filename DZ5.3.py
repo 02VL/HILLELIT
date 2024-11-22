@@ -14,5 +14,3 @@ print(b[:139])
 
 
 
-str("hello")
-
