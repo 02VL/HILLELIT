@@ -9,19 +9,16 @@
 # 7948799 -> 91 день, 23:59:59
 
 a = int(input("Введіть число, яке більше, або дорівнює 0 і менше за 8640000: "))
-days = a // (24*60*60)
-hours = (a - days*24*60*60) // (60*60)
-minutes = (a - days*24*60*60) - (hours*60*60) // 60
+
 b = divmod(a, 86400)
 c = divmod(b[1], 3600)
 d = divmod(c[1], 60)
-print(b)
-print(c)
-print(d)
+if b[-1] == 0 or 5 or 6 or 7 or 8 or 9:
+    print(b[0], "днів ", end='')
+elif b[-1] == 1:
+    print(b[0], "день ", end='')
+elif b[-1] == 2 or 3 or 4:
+    print(b[0], "днi ", end='')
+print(c[0], str(d[0]).zfill(2), str(d[1]).zfill(2), sep=":")
 
-
-print(days, "днів")
-print(hours, "годин")
-print(minutes, "хвилин")
-print(a, "днів")
 
