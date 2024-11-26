@@ -12,6 +12,14 @@ a = int(input("Введіть число, яке більше, або дорів
 days = a // (24*60*60)
 hours = (a - days*24*60*60) // (60*60)
 minutes = (a - days*24*60*60) - (hours*60*60) // 60
+b = divmod(a, 86400)
+c = divmod(b[1], 3600)
+d = divmod(c[1], 60)
+print(b)
+print(c)
+print(d)
+
+
 print(days, "днів")
 print(hours, "годин")
 print(minutes, "хвилин")
